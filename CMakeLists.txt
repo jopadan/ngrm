@@ -32,6 +32,7 @@ find_package(glfw3)
 add_executable( ${PROJECT_NAME} src/main.cpp ) 
 target_include_directories( ${PROJECT_NAME} PUBLIC GLFW::GFLW
 	PUBLIC_HEADER $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+	PUBLIC_HEADER $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/whmath/include/>
 	$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
