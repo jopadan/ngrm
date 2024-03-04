@@ -29,12 +29,12 @@ add_link_options(-Wl,-s)
 find_package(OpenGL)
 find_package(glfw3)
 
-add_executable( ${PROJECT_NAME} src/main.cpp ) 
-target_include_directories( ${PROJECT_NAME} PUBLIC GLFW::GFLW
+add_executable( cube examples/cube/main.cpp ) 
+target_include_directories( cube PUBLIC GLFW::GFLW
 	PUBLIC_HEADER $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
 	PUBLIC_HEADER $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/whmath/include/>
 	$<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
-target_link_libraries( ${PROJECT_NAME} glfw3 OpenGL OpenGL::GLU)
+target_link_libraries( cube glfw3 OpenGL OpenGL::GLU)
 
